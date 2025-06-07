@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Winston Curasi | Full Stack Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/background.css" />
+</head>
+
+<body>
+    <!-- Fondo de partículas de código -->
+    <div id="particles-js"></div>
+    <!-- Header épico -->
+    <header>
+        <div class="container">
+            <div class="hero">
+                <h4 style="color: var(--primary); margin-bottom: 1rem;">Hola, mi nombre es</h4>
+                <h1>Winston Curasi</h1>
+                <h2>Ingeniero de Software Full Stack</h2>
+                <p style="text-align: justify;">Ingeniero de Software con más de 7 años de experiencia en desarrollo
+                    Full Stack. Especializado en
+                    tecnologías como Python, Django, Odoo, Angular, Flutter y C#, enfocado en construir soluciones
+                    escalables que mejoran procesos empresariales y optimizan la experiencia del usuario.</p>
+                <div class="console-container floating">
+                    <div class="console-header">
+                        <div class="console-dots">
+                            <div class="console-dot red"></div>
+                            <div class="console-dot yellow"></div>
+                            <div class="console-dot green"></div>
+                        </div>
+                    </div>
+                    <div class="console-body">
+                        <div class="console-text" id="consoleOutput"></div>
+                        <span class="console-cursor"></span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a class="btn btn-primary" href="#contact">Contáctame</a>
+                    <a class="btn btn-outline" href="#projects">Ver mi trabajo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Sección de experiencia -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Desarrollador Frontend</h3>
+                        <span class="job-date">2024 - Presente</span>
+                    </div>
+                    <span class="job-company">Baufest · BCP</span>
+                    <ul class="job-description">
+                        <li>Desarrollo de flujo alterno en login con biometría</li>
+                        <li>Actualización de componentes UI/UX</li>
+                        <li>Implementación de nuevas funcionalidades</li>
+                        <li>Optimización de performance en 40%</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Ingeniero de Software</h3>
+                        <span class="job-date">2022 - 2024</span>
+                    </div>
+                    <span class="job-company">Inetum · RENIEC</span>
+                    <ul class="job-description">
+                        <li>Digitalización de certificados (nacimiento, defunción, matrimonio)</li>
+                        <li>Arquitectura frontend con Angular</li>
+                        <li>Integración con backend Java</li>
+                        <li>Mejora de procesos en 60%</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Analista Programador</h3>
+                        <span class="job-date">2019 - 2022</span>
+                    </div>
+                    <span class="job-company">IntiTec</span>
+                    <ul class="job-description">
+                        <li>Desarrollo de ERP con Odoo (Python/JS)</li>
+                        <li>Creación de app móvil "Ratas" (Flutter)</li>
+                        <li>Integración con Firebase/Firestore</li>
+                        <li>Landing pages con Angular</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="job-header">
+                        <h3 class="job-title">Full Stack Developer</h3>
+                        <span class="job-date">2017 - 2018</span>
+                    </div>
+                    <span class="job-company">Universidad Peruana Unión </span>
+                    <ul class="job-description">
+                        <li>Desarrollo de módulos de admisión y CRM (AngularJS)</li>
+                        <li>Integración de Google Maps</li>
+                        <li>Servicios web con Django Rest Framework</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de habilidades -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Angular</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>TypeScript</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>JavaScript</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Python</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Odoo</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Django</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Flutter</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Dart</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Java</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Firebase</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Git</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Docker</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>SQL</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de proyectos -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80');">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Aplicaciones de Autenticación (BCP)</h3>
+                        <p class="project-description">
+                            Banco de Crédito del Perú (BCP) · Área CIO
+                            Actualización del sistema de login único a una versión moderna de Angular
+                            Implementación de flujo alterno para bypass de login biométrico
+                            Desarrollo de nuevas funcionalidades en tarjetas frecuentes
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-item">Angular</span>
+                            <span class="tech-item">Java</span>
+                            <span class="tech-item">Microservicios</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a class="project-link" href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80');">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">App "Ratas"</h3>
+                        <p class="project-description">Aplicación móvil de gestión con Flutter y Firebase que sincroniza
+                            datos en tiempo real para más de 5,000 usuarios.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Flutter</span>
+                            <span class="tech-item">Firebase</span>
+                            <span class="tech-item">Firestore</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="#"><i class="fab fa-google-play"></i> Play Store</a>
+                            <a class="project-link" href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80');">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ERP Académico</h3>
+                        <p class="project-description">Sistema integral para gestión universitaria con AngularJS y
+                            Django utilizado por más de 15,000 estudiantes.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">AngularJS</span>
+                            <span class="tech-item">Django</span>
+                            <span class="tech-item">REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a class="project-link" href="#"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                        <div class="project-badge">Angular + Node.js</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Landing Pages BCP</h3>
+                        <p class="project-description">Sistema de 12+ landing pages para productos de crédito con
+                            integración a API bancaria.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Microfrontends</span>
+                            <span class="tech-item">Node.js</span>
+                            <span class="tech-item">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-chart-line"></i> Métricas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                        <div class="project-badge">Python + Odoo</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ERP Financiero</h3>
+                        <p class="project-description">Sistema integrado de contabilidad, facturación y reportes
+                            regulatorios.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">Odoo 15</span>
+                            <span class="tech-item">PostgreSQL</span>
+                            <span class="tech-item">QWeb</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-code"></i> Módulos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de contacto -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:winstoncurasi@email.com">winstoncurasi@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Teléfono</h3>
+                            <a href="tel:+51939556567">+51 939 556 567</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/winstoncurasi/"
+                                target="_blank">linkedin.com/in/winstoncurasi</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/winston07" target="_blank">github.com/winston07</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <!-- Aquí podrías agregar un formulario de contacto -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a class="social-link" href="https://github.com/winston07"><i class="fab fa-github"></i></a>
+                <a class="social-link" href="https://www.linkedin.com/in/winstoncurasi"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="credits">Diseñado y construido con ♥ por Winston Curasi © 2025</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="assets/js/particulas.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
