@@ -32,7 +32,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.15;
+    opacity: 1.15;
 }
 
 /* Scroll personalizado */
@@ -234,6 +234,7 @@ section {
     margin-bottom: 5rem;
     position: relative;
     display: inline-block;
+    animation: fadeInUp 0.8s ease-out both;
 }
 
 .section-title::before {
@@ -351,6 +352,7 @@ section {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
+    font-family: 'Fira Code', monospace;
 }
 
 .skill-bar {
@@ -369,6 +371,67 @@ section {
     transition: transform 1.5s ease;
 }
 
+
+/* Animación constante de pulso */
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Efectos hover */
+.skill-item:hover {
+    transform: translateX(5px);
+}
+
+.skill-item:hover .skill-progress {
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    animation: glow 1.5s ease infinite alternate;
+}
+
+.skill-item:hover .skill-name span:first-child {
+    color: var(--primary);
+    animation: textGlow 1s ease infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+    }
+
+    to {
+        box-shadow: 0 0 15px rgba(0, 255, 136, 0.7);
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+    }
+
+    to {
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.7);
+    }
+}
+
 /* Proyectos con efecto parallax */
 .projects-grid {
     display: grid;
@@ -383,6 +446,10 @@ section {
     position: relative;
     transition: var(--transition);
     border: 1px solid rgba(100, 255, 218, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: calc(var(--order) * 0.1s);
 }
 
 .project-image {
@@ -412,11 +479,16 @@ section {
     color: var(--lighter);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    animation: textFocusIn 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 0.3s;
+
 }
 
 .project-description {
     margin-bottom: 1.5rem;
     text-align: justify;
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 0.5s;
 }
 
 .project-tech {
@@ -424,6 +496,7 @@ section {
     flex-wrap: wrap;
     gap: 0.8rem;
     margin-bottom: 1.5rem;
+
 }
 
 .tech-item {
@@ -449,8 +522,26 @@ section {
     transition: var(--transition);
 }
 
+/* Efectos al pasar el mouse */
+.project-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .project-link:hover {
-    color: var(--primary);
+    transform: translateX(5px);
+    color: var(--primary) !important;
 }
 
 /* Contacto futurista */
@@ -498,6 +589,104 @@ section {
 
 .contact-text a:hover {
     color: var(--primary);
+}
+
+/* Estilos base */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* padding: 1rem; */
+    /* margin: 0.5rem 0; */
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    background: rgba(10, 25, 47, 0.3);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--primary);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.contact-text h3 {
+    color: var(--lighter);
+    margin-bottom: 0.3rem;
+}
+
+.contact-text a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efectos hover */
+.contact-item:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2); */
+    background: rgba(10, 25, 47, 0.7);
+}
+
+.contact-item:hover .contact-icon {
+    background: var(--primary);
+    color: var(--dark);
+    animation: float 2s ease-in-out infinite;
+}
+
+.contact-item:hover a {
+    color: var(--primary);
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 255, 136, 0.2);
+    border-radius: 100%;
+    transform: scale(0, 0) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+    transition: transform 0.6s ease, opacity 1s ease;
+    opacity: 0;
+    z-index: 1;
+}
+
+.contact-item:hover::before {
+    transform: scale(20, 20) translate(-50%, -50%);
+    opacity: 1;
+}
+
+/* Animación de flotación */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-5px) rotate(-2deg);
+    }
 }
 
 /* Footer */
@@ -589,5 +778,56 @@ footer::before {
 
     .section-title::before {
         left: -1.5rem;
+    }
+}
+
+/* Definición de keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textFocusIn {
+    0% {
+        filter: blur(4px);
+        opacity: 0;
+    }
+
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
     }
 }

@@ -5,7 +5,7 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 
-.code-background {
+/* .code-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,8 +14,8 @@ body {
     z-index: -1;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.8);
-}
-/* .code-background {
+} */
+.code-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@ body {
     overflow: hidden;
     z-index: -1;
     pointer-events: none;
-} */
+}
 
 .code-line {
     position: absolute;
@@ -32,7 +32,7 @@ body {
     font-family: 'Fira Code', monospace;
     color: #00ff88;
     font-size: 0.9rem;
-    opacity: 0.1;
+    opacity: 0.3;
     animation: floatCode linear infinite;
 }
 
